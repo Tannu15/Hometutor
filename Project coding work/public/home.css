@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+
+.nev {
+    display: flex;
+    /* border: 2px solid black; */
+    background-color: rgb(120, 0, 88);
+    width: auto;
+    height: 50px;
+
+
+
+}
+
+.header {
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(120, 0, 88);
+    width: auto;
+}
+
+.Home {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+/* .Home:hover {
+    color: rgb(255, 54, 54);
+}
+
+.Signup:hover {
+    color: rgb(255, 54, 54);
+}
+
+.login:hover {
+    color: rgb(255, 54, 54);
+} */
+.nev a:hover{
+    color: #ff9c9c;
+}
+
+
+
+.login {
+    position:absolute;
+    right: 150px;
+    top: 16px;
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.Signup {
+    position:absolute;
+    right: 75px;
+    top: 16px;
+    text-decoration: none;
+    color: white;
+
+}
+.About{
+    position:absolute;
+    right: 20px;
+    top: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.Tag_line {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 10px;
+    /* background-color: antiquewhite; */
+    color: rgb(92, 114, 97);
+    font-size: 20px;
+}
+
+main {
+    /* border: 2px solid black; */
+
+    /* background-image: url(images/hometuter-3.jpg); */
+    /* object-fit: contain; */
+    background-color: rgb(255, 251, 254);
+    
+}
+
+
+h2 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxs {
+    display: flex;
+    /* background-color: aqua; */
+    align-items: center;
+    
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+button {
+    width: 90%;
+    height: 50px;
+    margin: 1% 4% 1% 4%;
+    background-color: rgb(243, 157, 157);
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+
+
+}
+
+button:hover {
+    background-color: rgb(246, 121, 121);
+}
+
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: large;
+    width: 20% ;
+    height: 160px;
+    background-color: rgba(184, 196, 196, 0.182);
+    font-weight: 700;
+    border: 1px solid gray;
+    box-shadow: rgb(120, 10, 88) 4px 5px 1px;
+    border-radius: 10px;
+
+}
+
+.secondchild {
+    color: rgb(243, 157, 157);
+    ;
+}
+
+.thirdchild {
+
+    color: rgb(105, 105, 214);
+}
+
+p {
+    font-size: large;
+}
+
+footer {
+    background-color: rgb(229, 234, 234);
+
+}
+
+.city_mode {
+    display: flex;
+    width: 90%;
+    margin: 1% 4% 1% 4%;
+
+
+}
+
+.city {
+    width: 65%;
+    height: 25px;
+    margin: 1% 0% 0% 1%;
+    border: 2px solid white;
+    background-color: rgba(159, 169, 169, 0.182);
+
+}
+
+.Mode {
+    width: 35%;
+    height: 25px;
+    margin: 1% 0% 0% 0.5%;
+    border: 2px solid white;
+    background-color: rgba(159, 169, 169, 0.182);
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    /* margin: 0% 1% 0% 1% ; */
+
+
+
+
+}
+
+input {
+
+    height: 40px;
+    width: 90%;
+    ;
+    margin: 0% 4% 0.5% 4%;
+    border: 2px solid white;
+    background-color: rgba(159, 169, 169, 0.182);
+}
+section .container{
+    padding: 10px;
+}

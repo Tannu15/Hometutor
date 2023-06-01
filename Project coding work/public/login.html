@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>majarproject|loginpage</title>
+</head>
+<link rel="stylesheet" href="login.css">
+
+<body>
+    <nav class="nev">
+        <a href="index.html" class="Home">Home</a>
+        <a href="login.html" class="login">Login</a>
+        <a href="signupstudent.html" class="Signup">Register</a>
+    </nav>
+    <main>
+        <header class="header">
+            <h1>VIRTUAL HOME TUTER</h1>
+        </header>
+
+        <section class="Tag_line">
+            <h1>"We help students and tutors find each other"</h1>
+        </section>
+        <section class="loginform">
+            <div class="form">
+                <h1 id="login">login Page</h1>
+                <input  id="email"class="comm" type="number/gmail" placeholder="Enter mobile or Email" >
+                <input id="pass" class="comm" type="password" placeholder="Enter password">
+               <button id="butt"class="comm" onclick="login()">LOGIN</button>
+                <div class="remember">
+                    <input type="radio" id="Remember Me">
+                    <label for="Remember Me">Remember Me</label>
+                </div>
+                <a href="#" class="link">Forgot password?</a>
+                <a id="newuser" href="signupstudent.html" class="link">New User?</a>
+            </div>
+
+
+        </section>
+        <!-- <img src="../images/hometuter-1.jpg" alt=""> -->
+    </main>
+
+    <script>
+        function login() {
+            const email = document.getElementById("email");
+            const pass = document.getElementById("pass")
+            const userData = [];
+            if(!email.value || !pass.value){
+                alert("fields are empty!!!")
+            }else{
+                let i=0;
+            fetch("http://localhost:5000/register").then(response =>{
+                if(!response.ok){
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            }).then(data =>{
+                console.log('Data:',data);
+                for (i; i < data.length; i++) {
+                    userData[i] = data[i];
+                    if(data[i].email == email.value){
+                    if(data[i].phone == pass.value){
+                        alert("User found, loggin in...");
+                        window.location.assign("/teacherDashboard.html");
+                    }
+                }
+                }
+            }).catch(error =>{
+                console.error('Error:',error)
+            })
+
+            fetch("http://localhost:5000/teacher").then(response =>{
+                if(!response.ok){
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            }).then(data =>{
+                console.log('Data:',data);
+                for (let j=0; j < data.length; j++) {
+                    userData[i] = data[j];
+                    i++;
+                    if(data[i].email == email.value){
+                    if(data[i].phone == pass.value){
+                        alert("User found, loggin in...");
+                        window.location.assign("/teacherDashboard.html");
+                    }
+                }
+                }
+                console.log(userData);
+                for(let i=0;i<data.length;i++){
+                
+            }
+            }).catch(error =>{
+                console.error('Error:',error)
+            })
+
+            
+
+            }
+
+            
+        }
+    </script>
+</body>
+
+</html>

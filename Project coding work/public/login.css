@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+.nev {
+    display: flex;
+    /* border: 2px solid black; */
+    background-color: rgb(120, 0, 88);
+    width: auto;
+    height: 50px;
+    
+    
+
+}
+
+.header {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(120, 0, 88);
+    width: auto;
+}
+
+.Home {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    text-decoration: none;
+    color: white;
+}
+.Home:hover{
+    color: rgb(234, 155, 155);
+}
+.Signup:hover{
+    color: rgb(234, 155, 155);
+}
+.login:hover{
+    color: rgb(234, 155, 155);
+}
+
+
+
+.login {
+    position: absolute;
+    right: 80px;
+    top: 16px;
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.Signup {
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    text-decoration: none;
+    color: white;
+
+}
+.Tag_line{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 10px;
+    /* background-color: antiquewhite; */
+    color: rgb(92, 114, 97);
+    font-size: 20px;
+ }
+ .loginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .loginform a:hover{
+    color: rgb(255, 96, 96);
+}
+ .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    width: auto;
+    background-color:rgba(53, 58, 58, 0.182);
+    padding: 2% 2%;
+    opacity: 1;
+    z-index: 5;
+    border-radius: 12px;
+
+    
+    
+ }
+#login{
+    /* background-color: aqua; */
+    color: whitesmoke;
+    font-family:sans-serif;
+    margin:0.5% auto 4% auto ;
+}
+
+ .comm{
+    border-radius: 10px;
+    margin: 2% 0%;
+    text-align: center;
+    width: 300px;
+    height: 40px;  
+ }
+ #butt{
+    background-color: rgb(243, 157, 157);
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+ #butt:hover{
+    background-color: rgb(246, 121, 121);
+
+ }
+  .link{
+    text-decoration: none;
+    margin: 1%;
+  }
+  /* #newuser a:hover{
+    color: red;
+  } */
+
+
+body {
+ background-image: url(hometuter-1.jpg);
+ z-index: 8;
+ object-fit: fill;
+}

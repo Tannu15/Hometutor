@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="signupstudent.css">
+
+<body>
+    <nav class="nev">
+        <ul>
+            <li><a href="index.html" class="Home">Home</a></li>
+            <li><a href="login.html" class="login">Login</a></li>
+            <li><a href="signupstudent.html" class="Signup">Register</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header class="header">
+            <h1>VIRTUAL HOME TUTER</h1>
+        </header>
+
+        <section class="Tag_line">
+            <h1>"We help students and tutors find each other"</h1>
+        </section>
+
+        <section id="signupform">
+            <!-- <form> -->
+            <div id="select">
+                <h5> For</h5>
+                <div id="radios" class="tech">
+                    <a href="signupteacher.html">teacher
+                        <!-- <input type="radio"  name="hmm" id="student/parent" onclick=""> -->
+                        <!-- <label for="student/parent">Student/parent</label> -->
+                    </a>
+
+                    <!-- <a href="signupteacher.html">
+                        <input type="radio"  name="hmm" id="tutor">
+                        <label for="tutor">Tutor</label>
+                    </a> -->
+
+
+                </div>
+            </div>
+            <input class="comm" type="text" placeholder="Name" id="name">
+            <input class="comm" type="number" placeholder="Mobile number" id="phone">
+            <input class="comm" type="Email" placeholder=" Enter Email" id="email">
+            <input class="comm" type="password" placeholder="password" id="pass">
+            <input class="comm" type="text" placeholder="address" id="add">
+            <input class="comm" type="text" placeholder="course you need help with" id="course">
+            <input class="comm" type="text" placeholder="Subject you need help with" id="subject">
+            <button id="register" class="comm" onclick="register()">REGISTER</button>
+            <p>Already a member? <a href="login.html">login</a></p>
+
+            <!-- </form> -->
+        </section>
+
+        <script>
+            document.getElementById("register").addEventListener("click", register);
+
+            function register() {
+                const name = document.getElementById("name");
+                const phone = document.getElementById("phone");
+                const email = document.getElementById("email");
+                const password = documet.getElementById("pass");
+                const course = document.getElementById("course");
+                const subject = document.getElementById("subject");
+
+
+                const data = { name: name.value, phone: phone.value, email: email.value, password: pass.value, course: course.value, subject: subject.value };
+                if (!email.value || !pass.value) {
+                    alert("fields are empty!!!")
+                } else {
+                    fetch("http://localhost:5000/register", {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+
+                        }, credentials: "include", // Include credentials in the request
+
+                        body: JSON.stringify(data)
+                    }).then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+
+                        return response.json();
+                    }).then(responseData => {
+                        console.log('Respsonse:', responseData);
+                    }).catch(err => {
+                        console.error('Error:', error);
+                    });
+                }
+            }
+        </script>
+</body>
+
+</html>
